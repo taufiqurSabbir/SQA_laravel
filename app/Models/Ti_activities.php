@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Ti_activities extends Model
 {
     use HasFactory;
+    protected $guarded=[];
 }

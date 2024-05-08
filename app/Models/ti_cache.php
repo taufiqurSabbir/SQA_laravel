@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class ti_cache extends Model
 {
     use HasFactory;
+    protected $guarded=[];
 }

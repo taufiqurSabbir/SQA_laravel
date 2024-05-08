@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class ti_assignable_logs extends Model
 {
     use HasFactory;
+    protected $guarded=[];
 }

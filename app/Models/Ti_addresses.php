@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Ti_addresses extends Model
 {
     use HasFactory;
+    protected $guarded=[];
 }
