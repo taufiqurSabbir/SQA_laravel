@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('ti_igniter_automation_rule_actions', function (Blueprint $table) {
             $table->id();
+            $table->string('class_name', 128);
+            $table->text('options');
             $table->timestamps();
         });
     }

@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('ti_location_options', function (Blueprint $table) {
             $table->id();
+            $table->string('item', 128);
+            $table->longText('value')->charset('utf8mb4')->collation('utf8mb4_bin')->nullable()->comment('(DC2Type:json)');
             $table->timestamps();
         });
     }

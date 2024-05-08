@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('ti_categories', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 128);
+            $table->text('description')->nullable();
+            $table->integer('priority')->default(0);
+            $table->tinyInteger('status')->default(1);
+            $table->integer('nest_left')->nullable();
+            $table->integer('nest_right')->nullable();
+            $table->string('permalink_slug', 128)->nullable();
             $table->timestamps();
         });
     }

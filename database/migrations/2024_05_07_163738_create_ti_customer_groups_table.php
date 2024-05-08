@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('ti_customer_groups', function (Blueprint $table) {
             $table->id();
+            $table->string('group_name', 32);
+            $table->text('description')->nullable();
+            $table->tinyInteger('approval');
             $table->timestamps();
         });
     }

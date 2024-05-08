@@ -13,7 +13,15 @@ return new class extends Migration
     {
         Schema::create('ti_addresses', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('customer_id')->nullable();
+            $table->string('address_1', 128);
+            $table->string('address_2', 128)->nullable();
+            $table->string('city', 128)->nullable();
+            $table->string('state', 128)->nullable();
+            $table->string('postcode', 128)->nullable();
+            $table->unsignedBigInteger('country_id');
             $table->timestamps();
+
         });
     }
 

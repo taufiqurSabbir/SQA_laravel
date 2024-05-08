@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('ti_extensions', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 128);
+            $table->string('version', 32)->default('1.0.0');
             $table->timestamps();
         });
     }

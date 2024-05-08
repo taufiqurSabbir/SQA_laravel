@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('ti_igniter_cart_carts', function (Blueprint $table) {
             $table->id();
+            $table->string('identifier', 128);
+            $table->string('instance', 128);
+            $table->longText('data');
             $table->timestamps();
         });
     }

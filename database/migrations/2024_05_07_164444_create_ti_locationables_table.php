@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('ti_locationables', function (Blueprint $table) {
             $table->id();
+            $table->string('locationable_type', 128);
+            $table->text('options')->nullable();
+
             $table->timestamps();
         });
     }

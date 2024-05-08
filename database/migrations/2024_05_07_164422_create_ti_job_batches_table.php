@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('ti_job_batches', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 128);
+            $table->integer('total_jobs');
+            $table->integer('pending_jobs');
+            $table->integer('failed_jobs');
+            $table->text('failed_job_ids');
+            $table->mediumText('options')->nullable();
+            $table->integer('cancelled_at')->nullable();
+            $table->integer('finished_at')->nullable();
             $table->timestamps();
         });
     }

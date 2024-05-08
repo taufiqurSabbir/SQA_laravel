@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('ti_igniter_coupon_customer_groups', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedBigInteger('coupon_id');
+            $table->String('name')->nullable();
             $table->timestamps();
         });
     }

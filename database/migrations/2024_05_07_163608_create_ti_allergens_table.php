@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('ti_allergens', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 128);
+            $table->string('description', 128);
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
     }

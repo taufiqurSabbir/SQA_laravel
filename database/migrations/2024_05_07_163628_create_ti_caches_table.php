@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('ti_caches', function (Blueprint $table) {
             $table->id();
+            $table->string('key', 128);
+            $table->mediumText('value');
+            $table->integer('expiration');
             $table->timestamps();
         });
     }

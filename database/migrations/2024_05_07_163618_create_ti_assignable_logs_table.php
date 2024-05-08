@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('ti_assignable_logs', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('assignable_type', 128);
+            $table->timestamps(); // This adds 'created_at' and 'updated_at' columns.
         });
     }
 

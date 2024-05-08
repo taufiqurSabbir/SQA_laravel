@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('ti_igniter_socialite_providers', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('user_id')->nullable();
+            $table->string('provider')->nullable();
+            $table->string('provider_id')->nullable();
+            $table->string('token')->nullable();
+            $table->string('user_type')->nullable();
             $table->timestamps();
         });
     }

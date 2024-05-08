@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('ti_igniter_frontend_sliders', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 128);
+            $table->string('code', 128);
+            $table->text('metadata')->nullable();
             $table->timestamps();
         });
     }

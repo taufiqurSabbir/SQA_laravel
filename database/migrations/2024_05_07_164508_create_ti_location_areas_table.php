@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('ti_location_areas', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('location_id');
+            $table->string('name', 128);
+            $table->string('type', 32);
+            $table->longText('boundaries');
+            $table->longText('conditions');
+            $table->string('color', 40)->nullable();
+            $table->tinyInteger('is_default')->default(0);
+            $table->integer('priority')->default(0);
             $table->timestamps();
         });
     }

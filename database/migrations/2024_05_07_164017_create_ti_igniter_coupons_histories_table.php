@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('ti_igniter_coupons_histories', function (Blueprint $table) {
             $table->id();
+            $table->string('code', 15);
+            $table->decimal('min_total', 15, 4)->nullable();
+            $table->decimal('amount', 15, 4)->nullable();
+            $table->tinyInteger('status');
             $table->timestamps();
         });
     }

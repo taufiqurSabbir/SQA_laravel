@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('ti_igniter_automation_logs', function (Blueprint $table) {
             $table->id();
+            $table->tinyInteger('is_success');
+            $table->text('message');
+            $table->text('params')->nullable();
+            $table->text('exception')->nullable();
             $table->timestamps();
         });
     }

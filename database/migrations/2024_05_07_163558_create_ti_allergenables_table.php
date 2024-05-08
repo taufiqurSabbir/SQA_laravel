@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('ti_allergenables', function (Blueprint $table) {
             $table->id();
+            $table->string('allergenable_type', 128);
             $table->timestamps();
         });
     }

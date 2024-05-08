@@ -12,7 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('ti_igniter_coupon_menuses', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedBigInteger('coupon_id');
+            $table->unsignedBigInteger('menu_id');
+
+
+
+            // Define composite primary key
+            $table->primary(['coupon_id', 'menu_id']);
             $table->timestamps();
         });
     }

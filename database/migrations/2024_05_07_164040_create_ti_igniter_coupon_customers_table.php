@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('ti_igniter_coupon_customers', function (Blueprint $table) {
             $table->id();
+            $table->String('name')->nullable();
             $table->timestamps();
         });
     }

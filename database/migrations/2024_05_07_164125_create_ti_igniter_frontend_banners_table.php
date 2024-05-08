@@ -12,7 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('ti_igniter_frontend_banners', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('banner_id');
+            $table->string('name', 128);
+            $table->char('type', 8);
+            $table->string('click_url', 128)->nullable();
+            $table->unsignedBigInteger('language_id');
+            $table->string('alt_text', 128)->nullable();
+            $table->text('image_code')->nullable();
+            $table->text('custom_code')->nullable();
+            $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });
     }

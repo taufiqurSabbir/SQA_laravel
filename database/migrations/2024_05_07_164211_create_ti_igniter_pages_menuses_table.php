@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('ti_igniter_pages_menuses', function (Blueprint $table) {
             $table->id();
+            $table->string('theme_code', 128);
+            $table->string('name', 128);
+            $table->string('code', 128);
             $table->timestamps();
         });
     }

@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('ti_igniter_api_resources', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 128);
+            $table->string('endpoint', 128);
+            $table->string('controller', 128);
+            $table->string('description', 128)->nullable();
+            $table->text('meta')->nullable();
+            $table->tinyInteger('is_custom')->default(0);
             $table->timestamps();
         });
     }

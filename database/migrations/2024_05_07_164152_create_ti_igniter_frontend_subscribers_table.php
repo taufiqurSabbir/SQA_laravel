@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('ti_igniter_frontend_subscribers', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 255)->nullable();
+            $table->string('email', 128)->unique();
+            $table->integer('statistics')->default(0);
             $table->timestamps();
         });
     }
