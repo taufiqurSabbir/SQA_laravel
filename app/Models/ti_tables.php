@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ti_tables extends Model
 {
     use HasFactory;
+    protected $guarded =[];
+    protected $primaryKey = 'table_id';
+
 }

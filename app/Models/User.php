@@ -17,11 +17,15 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    protected $guarded = [];
+
+    public function isSuperUser()
+    {
+        return $this->super_user == 1;
+    }
+
+
+
 
     /**
      * The attributes that should be hidden for serialization.

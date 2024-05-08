@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class ti_igniter_cart_cart extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 }

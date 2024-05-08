@@ -9,4 +9,8 @@ class Ti_activities extends Model
 {
     use HasFactory;
     protected $guarded=[];
+
+    protected $casts = [
+        'properties' => 'array',
+    ];
 }

@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class ti_location_areas extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 }

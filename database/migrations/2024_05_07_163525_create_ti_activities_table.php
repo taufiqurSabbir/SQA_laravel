@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('ti_activities', function (Blueprint $table) {
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
+            $table->id();
+            $table->string('user_id')->nullable();
             $table->string('log_name', 128)->nullable();
             $table->text('properties')->nullable();
             $table->integer('subject_id')->nullable();

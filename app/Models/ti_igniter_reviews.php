@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class ti_igniter_reviews extends Model
 {
     use HasFactory;
+    protected $guarded = [];
+    protected $primaryKey = 'review_id';
 }
